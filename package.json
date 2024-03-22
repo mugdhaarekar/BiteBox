@@ -1,0 +1,35 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is namaste-react by Akshay Saini",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mugdhaarekar/namaste-react.git"
+  },
+  "keywords": [],
+  "author": "Mugdha Arekar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mugdhaarekar/namaste-react/issues"
+  },
+  "homepage": "https://github.com/mugdhaarekar/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
+}
