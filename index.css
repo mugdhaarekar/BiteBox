@@ -34,17 +34,17 @@
 }
 .res-card-detail {
   display: flex;
-  justify-content: space-between;
-  h4 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  flex-direction: column;
 }
 .res-container {
   max-width: 95vw;
   display: flex;
   flex-wrap: wrap;
+}
+.filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .filter-btn {
   margin: 10px;
@@ -59,4 +59,8 @@
   width: 200px;
   height: 400px;
   background-color: #f0f0f0;
+}
+.login {
+  padding: 0px 20px;
+  cursor: pointer;
 }

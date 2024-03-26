@@ -3,7 +3,6 @@ import { CDN_URL } from "../utils/constants";
 const RestoCard = (props) => {
   //   const { resImg, resName, cuisine, rating, delTime } = props;
   const { resData } = props;
-  console.log(resData, "resdata");
   const { cloudinaryImageId, name, avgRating, cuisines, costForTwo } = resData; //Optional Chaining
   return (
     <div className="res-card">
