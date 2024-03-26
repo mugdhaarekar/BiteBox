@@ -1,7 +1,7 @@
 {
-  "name": "namaste-react",
+  "name": "swiggy-clone",
   "version": "1.0.0",
-  "description": "This is namaste-react by Akshay Saini",
+  "description": "This is a swiggy-clone by Mugdha Arekar",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mugdhaarekar/namaste-react.git"
+    "url": "git+https://github.com/mugdhaarekar/Swiggy-clone"
   },
   "keywords": [],
   "author": "Mugdha Arekar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mugdhaarekar/namaste-react/issues"
+    "url": "https://github.com/mugdhaarekar/Swiggy-clone/issues"
   },
-  "homepage": "https://github.com/mugdhaarekar/namaste-react#readme",
+  "homepage": "https://github.com/mugdhaarekar/Swiggy-clone#readme",
   "devDependencies": {
     "parcel": "^2.11.0",
     "process": "^0.11.10"
