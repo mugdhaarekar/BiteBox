@@ -7,7 +7,6 @@ const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]); //same as let listofres =[]
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
   const [searchText, setSearchText] = useState("");
-  console.log("Body rendered");
   //is called after the component is completely rendered
   useEffect(() => {
     fetchData();
@@ -15,15 +14,14 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.11610&lng=79.07060&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     ); //fetch() is given to us by browsers which returns a promise
-
     const json = await data.json();
     setListOfRestaurants(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants //Optional chaining '?'
     );
     setFilteredRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants //Optional chaining '?'
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
   // let listOfRestaurants = [];
@@ -113,9 +111,7 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <>
-            <RestoCard key={restaurant?.info?.id} resData={restaurant.info} />
-          </>
+          <RestoCard key={restaurant.info.id} resData={restaurant.info} />
         ))}
       </div>
     </div>
