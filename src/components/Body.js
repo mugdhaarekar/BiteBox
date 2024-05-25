@@ -2,6 +2,7 @@ import RestoCard from "./RestoCard";
 import Shimmer from "./Shimmer";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   //Local State variable - super powerful variable
@@ -25,6 +26,13 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false)
+    return (
+      <h1>
+        Looks like you are offline. Please check your internet connection.
+      </h1>
+    );
   // let listOfRestaurants = [];
   //Normal JS vAariable scope- inside Body
 
@@ -112,7 +120,10 @@ const Body = () => {
       </div>
       <div className="res-container">
         {filteredRestaurants.map((restaurant) => (
-          <Link to={"/restaurants/" + restaurant.info.id}>
+          <Link
+            to={"/restaurants/" + restaurant.info.id}
+            key={restaurant?.info?.id}
+          >
             <RestoCard key={restaurant.info.id} resData={restaurant.info} />
           </Link>
         ))}
