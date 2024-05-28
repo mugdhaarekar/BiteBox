@@ -1,4 +1,4 @@
-# Swiggy-clone
+# BiteBox
 
 # Using Routing (react-router-dom)
 
