@@ -6,9 +6,9 @@ const RestoCard = (props) => {
   const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
     resData; //Optional Chaining
   return (
-    <div className="res-card">
+    <div className="my-4 mx-6 p-4 w-64 h-[30rem] shadow-xl rounded-lg bg-blue-100 hover:border border-solid border-green-500  ">
       <img src={CDN_URL + cloudinaryImageId} height="200rem" />
-      <h3>{name}</h3>
+      <h3 className="font-bold">{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <span className="res-card-detail">
         <h4>{avgRating} stars</h4>
