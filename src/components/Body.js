@@ -1,8 +1,9 @@
-import RestoCard from "./RestoCard";
+import RestoCard, { withOpenLabel } from "./RestoCard";
 import Shimmer from "./Shimmer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/userContext";
 
 const Body = () => {
   //Local State variable - super powerful variable
@@ -14,6 +15,7 @@ const Body = () => {
     fetchData();
   }, []);
 
+  const RestoCardOpen = withOpenLabel(RestoCard);
   const fetchData = async () => {
     const data = await fetch(
       "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.11610&lng=79.07060&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -35,48 +37,7 @@ const Body = () => {
     );
   // let listOfRestaurants = [];
   //Normal JS vAariable scope- inside Body
-
-  /*
-  let listOfRestaurantsJS = [
-    {
-      data: {
-        id: "334475",
-        name: "KFC",
-        cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-        costForTwo: 40000,
-        costForTwoString: "₹400 FOR TWO",
-        deliveryTime: 36,
-        avgRating: "3.8",
-      },
-    },
-    {
-      data: {
-        id: "334476",
-        name: "Dominos",
-        cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-        costForTwo: 40000,
-        costForTwoString: "₹400 FOR TWO",
-        deliveryTime: 36,
-        avgRating: "4.2",
-      },
-    },
-    {
-      data: {
-        id: "334477",
-        name: "McD",
-        cloudinaryImageId: "bdcd233971b7c81bf77e1fa4471280eb",
-        cuisines: ["Burgers", "Biryani", "American", "Snacks", "Fast Food"],
-        costForTwo: 40000,
-        costForTwoString: "₹400 FOR TWO",
-        deliveryTime: 36,
-        avgRating: "4.1",
-      },
-    },
-  ];
-*/
-
+  const { setUserName, loggedInUser } = useContext(UserContext);
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -125,7 +86,11 @@ const Body = () => {
             to={"/restaurants/" + restaurant.info.id}
             key={restaurant?.info?.id}
           >
-            <RestoCard key={restaurant.info.id} resData={restaurant.info} />
+            {restaurant?.info?.isOpen === false ? (
+              <RestoCardOpen resData={restaurant.info} />
+            ) : (
+              <RestoCard key={restaurant.info.id} resData={restaurant.info} />
+            )}
           </Link>
         ))}
       </div>

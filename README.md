@@ -2,30 +2,45 @@
 
 # Using Routing (react-router-dom)
 
-    - createBrowserRouter -> provided by react-router-dom takes array of objects(having path,element,errorElement)
-    - RouterProvider -> component takes router in params
-    - useRouteError -> Gives comprehensive errors i.e status,statusText etc
-    - children -> Keeps some header as constant fr all pages and changes just the Body
-    - Outlet -> will be filled with children acc to path (chilren elements replace the Outlet acc to path)
-    - Note :  Donot use <a> when in React(Route) -> since entire page refreshes
-      - instead use Link-> To navigate to new page without refreshing entire page(in the backside uses <a href="">)
+- createBrowserRouter -> provided by react-router-dom takes array of objects(having path,element,errorElement)
 
-    # Dynamic Routing
+  - RouterProvider -> component takes router in params
+  - useRouteError -> Gives comprehensive errors i.e status,statusText etc
+  - children -> Keeps some header as constant fr all pages and changes just the Body
+  - Outlet -> will be filled with children acc to path (chilren elements replace the Outlet acc to path)
+  - Note : Donot use <a> when in React(Route) -> since entire page refreshes
+    - instead use Link-> To navigate to new page without refreshing entire page(in the backside uses <a href="">)
+
+  # Dynamic Routing
+
       - Has different route name depending upon the page (Ex-> post click of res on basis of res name)
 
 # 2 types of Routings in Web Applications
 
-    1)Client Side Routing
-        - no n/w call
-        - has all components at first
-        - no new page fetched
-    2)Server Side Routing
-        - makes n/w call
-        -  gets the data and renders page post data comes - refreshes page
+1)Client Side Routing
+
+- no n/w call
+- has all components at first
+- no new page fetched
+  2)Server Side Routing
+
+- makes n/w call
+- gets the data and renders page post data comes
+- refreshes page
 
 # React as Single page application
 
     Because the page isn't refreshed only the components are reloaded via Client Side Routing
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connect store to App
+- Slice (cartSlice)
+- dispatch (action)
+- Selector
+- React Toolkit uses Immer BTS
 
 # Types of testing (developer)
 
