@@ -1,4 +1,4 @@
-import RestoCard, { withOpenLabel } from "./RestoCard";
+import RestaurantCard, { withOpenLabel } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
@@ -15,7 +15,7 @@ const Body = () => {
     fetchData();
   }, []);
 
-  const RestoCardOpen = withOpenLabel(RestoCard);
+  const RestaurantCardOpen = withOpenLabel(RestaurantCard);
   const fetchData = async () => {
     const data = await fetch(
       "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.11610&lng=79.07060&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -87,9 +87,12 @@ const Body = () => {
             key={restaurant?.info?.id}
           >
             {restaurant?.info?.isOpen === false ? (
-              <RestoCardOpen resData={restaurant.info} />
+              <RestaurantCardOpen resData={restaurant.info} />
             ) : (
-              <RestoCard key={restaurant.info.id} resData={restaurant.info} />
+              <RestaurantCard
+                key={restaurant.info.id}
+                resData={restaurant.info}
+              />
             )}
           </Link>
         ))}

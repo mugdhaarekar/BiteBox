@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/userContext";
 
-const RestoCard = (props) => {
+const RestaurantCard = (props) => {
   //   const { resImg, resName, cuisine, rating, delTime } = props;
   const { resData } = props;
   const userName = useContext(UserContext);
@@ -21,18 +21,18 @@ const RestoCard = (props) => {
     </div>
   );
 };
-export const withOpenLabel = (RestoCard) => {
+export const withOpenLabel = (RestaurantCard) => {
   return (props) => {
     return (
       <div>
         <label className="bg-red-600 absolute text-white m-2 p-2 rounded-lg">
           Closed
         </label>
-        <RestoCard {...props} />
+        <RestaurantCard {...props} />
       </div>
     );
   };
 };
 // HOC
 //input == RestoCard o/p === RestoCardOpen
-export default RestoCard;
+export default RestaurantCard;

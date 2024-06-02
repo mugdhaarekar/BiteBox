@@ -44,9 +44,9 @@
 
 # Types of testing (developer)
 
-    - Unit Testing -> Testing React Components in isolation
-    - Integration Testing -> Testing integration of components
-    - End to End Testing - e2e testing -> Testing application from user landing on page till user leaving page
+- Unit Testing -> Testing React Components in isolation
+- Integration Testing -> Testing integration of components
+- End to End Testing - e2e testing -> Testing application from user landing on page till user leaving page
 
 # Setting up Testing
 
@@ -54,8 +54,10 @@
 - Install jest
 - Install Babel dependencies
 - Configure Babel
-- Configure Parcel (.parcelrc) to disable default Babel transpilation
+- Configure Parcel Config file(.parcelrc) to disable default Babel transpilation
 - jest configuration (by npx jest --init)
 - Install jsdom library
+- render()-> used to load component in jsdom
 - Install @babel/preset-react - to make JSX work in test cases
 - Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom

@@ -1,0 +1,67 @@
+{
+  "id": "743156",
+  "name": "Cheesecakes By CakeZone",
+  "cloudinaryImageId": "76d5f4055f9d5796bc7b72dfba8bd92b",
+  "locality": "Lendra Park",
+  "areaName": "Dharampeth",
+  "costForTwo": "₹200 for two",
+  "cuisines": ["Bakery", "Desserts"],
+  "avgRating": 4.3,
+  "veg": true,
+  "parentId": "348057",
+  "avgRatingString": "4.3",
+  "totalRatingsString": "50+",
+  "sla": {
+    "deliveryTime": 22,
+    "lastMileTravel": 2.3,
+    "serviceability": "SERVICEABLE",
+    "slaString": "20-25 mins",
+    "lastMileTravelString": "2.3 km",
+    "iconType": "ICON_TYPE_EMPTY"
+  },
+  "availability": {
+    "nextCloseTime": "2024-06-03 03:00:00",
+    "opened": true
+  },
+  "badges": {
+    "imageBadges": [
+      {
+        "imageId": "newg.png",
+        "description": "Gourmet"
+      }
+    ]
+  },
+  "isOpen": true,
+  "type": "F",
+  "badgesV2": {
+    "entityBadges": {
+      "imageBased": {
+        "badgeObject": [
+          {
+            "attributes": {
+              "description": "Gourmet",
+              "imageId": "newg.png"
+            }
+          }
+        ]
+      },
+      "textBased": {},
+      "textExtendedBadges": {}
+    }
+  },
+  "aggregatedDiscountInfoV3": {
+    "header": "60% OFF",
+    "subHeader": "UPTO ₹120"
+  },
+  "differentiatedUi": {
+    "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+    "differentiatedUiMediaDetails": {
+      "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+      "lottie": {},
+      "video": {}
+    }
+  },
+  "reviewsSummary": {},
+  "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+  "restaurantOfferPresentationInfo": {}
+}

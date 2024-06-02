@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import BiteBoxlogo from "../../BiteBoxlogo.png";
 import UserContext from "../utils/userContext";
 import { useSelector } from "react-redux";
 
@@ -20,7 +19,7 @@ const Header = () => {
   return (
     <div className="flex justify-between bg-green-100 shadow-lg mb-2 items-center h-28">
       <div className="">
-        <img className="w-48" src={BiteBoxlogo} />
+        <img className="w-48" src={LOGO_URL} />
       </div>
       <div className="">
         <ul className="flex m-4">
