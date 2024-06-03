@@ -10,7 +10,11 @@ const ItemList = ({ items }) => {
   return (
     <div>
       {items.map((item) => (
-        <div className="flex justify-between my-4" key={item.card.info.id}>
+        <div
+          className="flex justify-between my-4"
+          key={item.card.info.id}
+          data-testid="foodItems"
+        >
           <div className="text-left p-2 m-2 border-b-2 border-gray-200">
             <div className="flex flex-col  w-9/12">
               <span className="font-semibold">{item.card.info.name}</span>
