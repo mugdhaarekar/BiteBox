@@ -2,14 +2,17 @@ import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/userContext";
 
-const RestaurantCard = (props) => {
+const RestaurantCard = (props, { data }) => {
   //   const { resImg, resName, cuisine, rating, delTime } = props;
   const { resData } = props;
   const userName = useContext(UserContext);
   const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
     resData; //Optional Chaining
   return (
-    <div className="my-4 mx-6 p-4 w-[16rem] h-[32rem] shadow-xl rounded-lg bg-blue-100 hover:border border-solid border-green-500 ">
+    <div
+      data-testid="resCard"
+      className="my-4 mx-6 p-4 w-[16rem] h-[32rem] shadow-xl rounded-lg bg-blue-100 hover:border border-solid border-green-500 "
+    >
       <img src={CDN_URL + cloudinaryImageId} height="200rem" />
       <h3 className="font-bold">{name}</h3>
       <h4>{cuisines.join(", ")}</h4>

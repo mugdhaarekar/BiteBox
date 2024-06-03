@@ -41,10 +41,11 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="">
+    <div className="" data-testid="body">
       <div className="flex">
         <div className="m-4 p-4">
           <input
+            data-testid="searchInput"
             type="text"
             className="search-box border border-solid border-black"
             value={searchText}
@@ -90,6 +91,7 @@ const Body = () => {
               <RestaurantCardOpen resData={restaurant.info} />
             ) : (
               <RestaurantCard
+                data-testid="resCard"
                 key={restaurant.info.id}
                 resData={restaurant.info}
               />

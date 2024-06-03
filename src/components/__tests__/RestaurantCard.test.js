@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import RestaurantCard, { withOpenLabel } from "../RestaurantCard";
-import MOCK_DATA from "../../components/mocks/resCardMock.json";
+import MOCK_DATA from "../mocks/resCardMock.json";
 import "@testing-library/jest-dom";
 
 it("Should render RestaurantCard component with props Data", () => {
