@@ -61,3 +61,5 @@
 - Install @babel/preset-react - to make JSX work in test cases
 - Include @babel/preset-react inside my babel config
 - Install @testing-library/jest-dom
+- watch-test in package.json -> keeps the test running
+- While using fetch(i.e async operations) OR state updations , wrap render method into act()
